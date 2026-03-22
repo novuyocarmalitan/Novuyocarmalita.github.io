@@ -132,7 +132,7 @@ section{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:4rem 2
 .project-card{
   background:var(--card);border:1px solid var(--border);
   border-radius:6px;padding:1.5rem;
-  transition:border-color .2s,transform .2s;cursor:pointer;
+  transition:border-color .2s,transform .2s;
   position:relative;overflow:hidden;
 }
 .project-card::before{
@@ -150,9 +150,23 @@ section{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:4rem 2
 .project-name{font-size:1.15rem;font-weight:700;margin-bottom:.6rem}
 .project-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
 
+.project-links{display:flex;gap:.6rem;flex-wrap:wrap}
+.project-link{
+  font-family:'Space Mono',monospace;font-size:.65rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.4rem .9rem;border-radius:3px;
+  text-decoration:none;transition:all .2s;
+  display:inline-flex;align-items:center;gap:.4rem;
+}
+.project-link.code{
+  background:transparent;color:var(--accent);
+  border:1px solid rgba(0,229,160,.4);
+}
+.project-link.code:hover{background:rgba(0,229,160,.07)}
+
 .project-status{
   font-family:'Space Mono',monospace;font-size:.65rem;
-  color:var(--accent);display:flex;align-items:center;gap:.4rem;
+  color:var(--accent);display:flex;align-items:center;gap:.4rem;margin-top:.7rem;
 }
 .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
@@ -180,7 +194,6 @@ footer{
   color:var(--muted);letter-spacing:.08em;
 }
 footer span{color:var(--accent)}
-
 .cursor::after{content:'_';animation:blink 1s step-end infinite;color:var(--accent)}
 
 @media(max-width:640px){
@@ -311,15 +324,20 @@ footer span{color:var(--accent)}
   <div class="section-label">// 03 — Projects</div>
   <div class="section-title">Work & Builds</div>
   <div class="projects-grid">
+
     <div class="project-card">
       <div class="project-type">Data Analytics</div>
       <div class="project-name">Sales Dashboard — Retail Analysis</div>
-      <div class="project-desc">An end-to-end analysis of retail sales data. Cleaned messy CSV data, identified seasonal trends, and built an interactive Power BI dashboard for stakeholders.</div>
+      <div class="project-desc">An end-to-end analysis of retail sales data. Cleaned messy CSV data, identified seasonal trends, and built an interactive dashboard for stakeholders.</div>
       <div class="skill-tags" style="margin-bottom:.8rem">
         <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Power BI</span>
       </div>
-      <div class="project-status"><div class="dot planned"></div> Coming Soon</div>
+      <div class="project-links">
+        <a href="https://github.com/novuyocarmalitan/Retail-Sales-Dashboard" target="_blank" class="project-link code">⌥ View Code</a>
+      </div>
+      <div class="project-status"><div class="dot"></div> Live on GitHub</div>
     </div>
+
     <div class="project-card">
       <div class="project-type">Machine Learning</div>
       <div class="project-name">Spam Classifier — NLP Model</div>
@@ -329,6 +347,7 @@ footer span{color:var(--accent)}
       </div>
       <div class="project-status"><div class="dot planned"></div> Coming Soon</div>
     </div>
+
     <div class="project-card">
       <div class="project-type">Cybersecurity</div>
       <div class="project-name">Network Scan Tool — Recon Script</div>
@@ -338,6 +357,7 @@ footer span{color:var(--accent)}
       </div>
       <div class="project-status"><div class="dot planned"></div> Coming Soon</div>
     </div>
+
     <div class="project-card">
       <div class="project-type">AI / Automation</div>
       <div class="project-name">PDF Report Generator — AI Summariser</div>
@@ -347,6 +367,7 @@ footer span{color:var(--accent)}
       </div>
       <div class="project-status"><div class="dot planned"></div> Coming Soon</div>
     </div>
+
   </div>
 </section>
 
@@ -361,6 +382,7 @@ footer span{color:var(--accent)}
         <div>📍 &nbsp; Bulawayo, Zimbabwe</div>
         <div>📧 &nbsp; <a href="mailto:novuyocarmalitan@gmail.com">novuyocarmalitan@gmail.com</a></div>
         <div>🔗 &nbsp; <a href="https://www.linkedin.com/in/novuyo-carmalita-ndlovu-b94439384" target="_blank">linkedin.com/in/novuyo-carmalita-ndlovu</a></div>
+        <div>🐙 &nbsp; <a href="https://github.com/novuyocarmalitan" target="_blank">github.com/novuyocarmalitan</a></div>
       </div>
       <br>
       <p style="font-size:.8rem;color:var(--muted);line-height:1.8;font-family:'Space Mono',monospace">
